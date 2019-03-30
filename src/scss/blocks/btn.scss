@@ -1,0 +1,20 @@
+.btn {
+  display: inline-block;
+  border: none;
+  border-radius: $border-radius;
+  padding: 10px 70px;
+  margin: 15px 0;
+  font-size: $font-size;
+  font-weight: 400;
+  color: #fff;
+  background: #000;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.3s;
+
+  &:hover,
+  &:focus {
+    background-color: #a81e5c;
+  }
+}

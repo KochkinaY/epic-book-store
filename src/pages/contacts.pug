@@ -6,5 +6,26 @@ block meta
 
 
 block content
-  h1 Заголовок
+  h1 Контакты
+  form.form(action="")
+    h2.form__title Есть вопросы?
+    .form__descr
+      p Напишите нам. Отвечаем в течении дня
+    .form__container
+      .field-text.field-text--error.form__email
+        input.field-text__input(type='email', placeholder='Ваша почта')
+        .field-text__msg Вы не ввели почту
+      .field-text.form__msg
+        input.field-text__input(type='text', placeholder='Сообщение')
+      //- .field-checkbox.field-checkbox--error.form__checkbox
+      .field-checkbox.form__checkbox
+        input.field-checkbox__input(type='checkbox', id='agreement')
+        label(for='agreement')
+        span.field-checkbox__text #[label(for='agreement') Я согласен(-на) с] #[a(href='') политикой конфиденциальности] и #[a(href='') правилами обработки данных]
+        .field-checkbox__msg Нужно согласиться с условиями
+      .field-action.form__action
+        button.btn Отправить
 
+  +map('Набережная реки Фонтанки, 202', 'с 9:00 до 19:00, ежедневно', '+7 (911) 123 45 67', 'img/map.jpg')
+
+  +invitation('Мы открыли для вас уютную библиотеку', 'img/bg_rose.jpg', 'Приходите к нам по адресу Никитинская 10, каждый день с 12:00 до 18:00')

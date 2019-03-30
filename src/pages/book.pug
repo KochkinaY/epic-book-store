@@ -6,4 +6,31 @@ block meta
 
 
 block content
-  h1 Заголовок
+  //- h1 Заголовок
+
+  article.book
+    .book__inner
+      img.book(src='img/super.png', alt='', width='', height='')
+      p.book__avtor Эдди Юн
+      h2.book__title Суперпотребители
+      p Кто это и почему они важны для вашего бизнеса
+      .book__articul Артикул: 1830720
+      .book__available В наличии: 5 шт.
+      .book__publishing Издательство: МИФ
+      strong.book__price Цена: 800 р.
+      a.btn(href='') Добавить в корзину
+      input(type='text', value='5')
+      a(href='')
+        svg(width='24', height='24')
+        p 20 людям понравилась эта книга
+      .book__desrc
+        h4.book__tittle Короткое описание
+        p В отличие от обычных покупателей суперпотребители очень заинтересованы в ваших товарах, а возможно, даже слегка помешаны на них.
+        p Они знают о кроссовках всё и имеют десятки пар. Они спортивные фанаты c копиями футболок любимой команды, а стены их гаражей украшены подписанной символикой.
+        a(href='') Показать полностью
+
+
+  +social('https://www.facebook.com/profile.php?id=100011672930358', 'img/facebook.png')(title='Facebook')
+  +social('https://vk.com/n.gromov', 'img/vk.png')(title='ВКонтакте')
+  +invitation('Мы открыли для вас уютную библиотеку', 'img/bg_rose.jpg', 'Приходите к нам по адресу Никитинская 10, каждый день с 12:00 до 18:00')
+
