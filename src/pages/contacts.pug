@@ -6,7 +6,17 @@ block meta
 
 
 block content
+
   h1 Контакты
+  article.map__location
+    .map__location-inner
+      ul.map__location-list
+        li.map__location-item Набережная реки Фонтанки, 202
+        li.map__location-item с 9:00 до 19:00, ежедневно
+        li.map__location-item +7 (911) 123 45 67
+      img.map__location-pict(src='img/map.jpg')
+
+
   form.form(action="")
     h2.form__title Есть вопросы?
     .form__descr
@@ -19,13 +29,12 @@ block content
         input.field-text__input(type='text', placeholder='Сообщение')
       //- .field-checkbox.field-checkbox--error.form__checkbox
       .field-checkbox.form__checkbox
+      .field-action.form__action
+        button.btn Отправить
         input.field-checkbox__input(type='checkbox', id='agreement')
         label(for='agreement')
         span.field-checkbox__text #[label(for='agreement') Я согласен(-на) с] #[a(href='') политикой конфиденциальности] и #[a(href='') правилами обработки данных]
-        .field-checkbox__msg Нужно согласиться с условиями
-      .field-action.form__action
-        button.btn Отправить
+        //- .field-checkbox__msg Нужно согласиться с условиями
 
-  +map('Набережная реки Фонтанки, 202', 'с 9:00 до 19:00, ежедневно', '+7 (911) 123 45 67', 'img/map.jpg')
 
   +invitation('Мы открыли для вас уютную библиотеку', 'img/bg_rose.jpg', 'Приходите к нам по адресу Никитинская 10, каждый день с 12:00 до 18:00')

@@ -3,7 +3,7 @@
 mixin mini-card(name, url, imgUrl, descr, price)
   article.mini-card
     a.mini-card__inner(href=url)
-      img.mini-card__pict(src=imgUrl, alt=name)
+      img.mini-card__pict(src=imgUrl, alt=name, width=280, height=394)
       h3.mini-card__title= name
       if descr
         p.mini-card__descr= descr
@@ -11,42 +11,10 @@ mixin mini-card(name, url, imgUrl, descr, price)
         p.mini-card__price= price
 
 
-mixin map(adress, openTime, phone, imgUrl)
-  article.map
-    .map__inner
-      ul.map__list
-        li.map__item= adress
-        li.map__item= openTime
-        li.map__item= phone
-      img.map__pict(src=imgUrl)
-
-
-mixin field-text(name, descr, props)
-  article.field-text
-    .field-text__inner
-      h4.field-text__title= name
-      if descr
-        p.field-text__descr= descr
-      input(type='email' placeholder='Ваша почта' required)
-      input(type='text' placeholder='Сообщение' required)
-      a(class='btn' href='') Отправить
-      p
-      input(type='checkbox' name='agreement')
-      p Я согласен(-на) с политикой конфиденциальности и правилами обработки данных
-
-
 mixin invitation(name, imgUrl, descr)
-  article.invitation
-    .invitation__inner
-      img.invitation__pict(src=imgUrl)
-      h4.invitation__title= name
-      if descr
-        p.invitation__descr= descr
+  .invitation__inner
+    img.invitation__pict(src=imgUrl)
+    h4.invitation__title= name
+    p.invitation__descr= descr
 
 
-mixin social(url, imgUrl, name)
-  article.social
-    .social__inner
-      a.social__link(href=url)
-        img.social__icon(src=imgUrl, alt=name)
-        h4.social__title= name

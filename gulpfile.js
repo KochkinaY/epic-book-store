@@ -87,7 +87,7 @@ function copyJsVendors() {
 }
 
 function copyImages() {
-  return src(dir.src + 'img/*.{jpg,jpeg,png,svg,webp,gif}')
+  return src(dir.src + 'img/**/*.{jpg,jpeg,png,svg,webp,gif}')
     .pipe(dest(dir.build + 'img/'));
 }
 exports.copyImages = copyImages;
@@ -119,11 +119,12 @@ function serve() {
     dir.src + 'pug/*.pug',
   ], compilePug);
   watch(dir.src + 'js/*.js', processJs);
-  watch(dir.src + 'img/*.{jpg,jpeg,png,svg,webp,gif}', copyImages);
+  watch(dir.src + 'img/**/*.{jpg,jpeg,png,svg,webp,gif}', copyImages);
   watch([
     dir.build + '*.html',
     dir.build + 'js/*.js',
-    dir.build + 'img/*.{jpg,jpeg,png,svg,webp,gif}',
+    dir.build + 'img/**/*.{jpg,jpeg,png,svg,webp,gif}',
+
   ]).on('change', browserSync.reload);
 }
 
