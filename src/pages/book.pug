@@ -37,15 +37,23 @@ block content
         p В отличие от обычных покупателей суперпотребители очень заинтересованы в ваших товарах, а возможно, даже слегка помешаны на них.
         p Они знают о кроссовках всё и имеют десятки пар. Они спортивные фанаты c копиями футболок любимой команды, а стены их гаражей украшены подписанной символикой.
         a(href='') Показать полностью
-      .social__link
-        a.social__facebook(href='https://www.facebook.com/profile.php?id=100011672930358')
-          img.social__icon(src='img/facebook.png')
-        a.social__vk(href='https://vk.com/n.gromov')
-          img.social__icon(src='img/vk.png')
-        a.social__twitter(href='https://www.facebook.com/profile.php?id=100011672930358')
-          img.social__icon(src='img/facebook.png')
-        a.social__insta(href='https://vk.com/n.gromov')
-          img.social__icon(src='img/vk.png')
+        button.social__btn(type='button')
+          svg(width='16', height='16')
+            use(xlink:href='img/sprite.svg#facebook')
+          span.social__btn__num 3
+        button.social__btn(type='button')
+          svg(width='16', height='16')
+            use(xlink:href='img/sprite.svg#vk')
+          span.social__btn__num 8
+        button.social__btn(type='button')
+          svg(width='16', height='16')
+            use(xlink:href='img/sprite.svg#like')
+          span.social__btn__num 13
+        button.social__btn(type='button')
+          svg(width='16', height='16')
+            use(xlink:href='img/sprite.svg#dislike')
+          span.social__btn__num 4
+
 
   +invitation('Мы открыли для вас уютную библиотеку', 'img/bg_rose.jpg', 'Приходите к нам по адресу Никитинская 10, каждый день с 12:00 до 18:00')
 
