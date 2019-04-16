@@ -1,7 +1,72 @@
 .page-header {
   display: block;
-  padding: 20px;
-  // background-color: $main-color;
-  // color: desaturate($main-color, 40%);
+  background-color: #fff;
+
+
+  &__inner {
+		display: flex;
+		justify-content: space-around;
+}
+
+  * a {
+    display: flex;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $gray-dark;
+    font-weight: bold;
+  }
+
+  * p {
+    display: flex;
+    color: $gray;
+
+  }
+
+  &__cart {
+    color: $gray-dark;
+    padding: 0 20px;
+    text-decoration: none;
+  }
+}
+
+.main-nav {
+
+  &__burger {
+    display: none;
+
+  }
+
+  &__phone-number {
+    display: none;
+
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    display: flex;
+    align-content: flex-end;
+    text-decoration: none;
+    text-transform: lowercase;
+    padding: 0 10px;
+    color: $gray-dark;
+  }
+
+  &__item a {
+    display: flex;
+    align-content: flex-end;
+    color: $gray-dark;
+    text-transform: lowercase;
+    margin-left: 15px;
+    text-decoration: none;
+  }
+
+  &__item a:hover {
+        display: flex;
+        color: $main-color;
+  }
+
 
 }

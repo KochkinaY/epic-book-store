@@ -1,6 +1,13 @@
-form {
- border: 8px solid #eee;
+.form {
+ border: 8px solid $gray-lighten;
  margin: 30px;
  padding: 25px;
+
+    &__title {}
+
+    &__descr p {
+      font-weight: 500;
+    }
+
 
 }

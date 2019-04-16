@@ -1,6 +1,6 @@
 .field-text {
   position: relative;
-  padding:18px 0 0;
+  padding: 18px 40px 0 0px;
 
   &__input {
     display: block;
@@ -10,10 +10,13 @@
     padding: 0;
     border: none;
     border-bottom: 4px solid $gray-light;
-    font-family:inherit;
+    font-family: inherit;
     font-size: $font-size;
     line-height: 1;
     color: $text-color;
+    background-color: transparent;
+    font-weight: 500;
+    outline: none;
   }
 
   &:focus {
@@ -28,7 +31,7 @@
 
 
   &__msg {
-    position:absolute;
+    position: absolute;
     top: 6px;
     left: 0;
     font-size: $font-size-sm;

@@ -11,10 +11,9 @@ mixin mini-card(name, url, imgUrl, descr, price)
         p.mini-card__price= price
 
 
-mixin invitation(name, imgUrl, descr)
-  .invitation__inner
-    img.invitation__pict(src=imgUrl)
-    h4.invitation__title= name
-    p.invitation__descr= descr
+mixin invitation()
+  section.invitation
+    h3.invitation__title Мы открыли для вас уютную библиотеку
+    p.invitation__descr Приходите к нам по адресу Никитинская 10, каждый день с 12:00 до 18:00
 
 

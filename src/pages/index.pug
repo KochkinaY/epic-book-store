@@ -6,13 +6,107 @@ block meta
 
 
 block content
-  h1 Заголовок
+  section.promo.slider
+    h1.promo__title
+    div.promo__inner
+      div.promo__item
+        p.promo__item-descr Новое поступление книги «Симпсоны и их математические системы»
+        div.promo__item-text
+          p.promo__item-pseudotitle Для поклонников сериала «Симпсоны» и для всех, кому интересна математика
+          a.promo__item-more Хочу узнать о книге больше
+        img.promo__item-img(src='', alt='')
+      //- div.promo__item
+      //-   p.promo__item-descr Новое...
+      //-   div.promo__item-text
+      //-     p.promo__item-pseudotitle Для поклонников...
+      //-     a.promo__item-more Хочу узнать о книге больше
+      //-   img.promo__item-img(src='', alt='')
+
+  section.catalog
+    h2.catalog__title
+    div.tabs
+      ul.tabs__list
+        li.tabs__item
+          button.tabs__btn Все
+        li.tabs__item
+          button.tabs__btn Маркетинг
+        li.tabs__item
+          button.tabs__btn Научпоп
+        li.tabs__item
+          button.tabs__btn Бизнес
+        li.tabs__item
+          button.tabs__btn Творчество
+    div.catalog__list
+      div.catalog__list-inner
+        div.catalog__item
+          +mini-card('Лидерство и самообман', 'book.html', 'img/books_all/liderstvo-i-samoobman.jpg', 'Жизнь, свободная от шор', '500 р.')
+        div.catalog__item
+          +mini-card('Путеводитель по лжи', 'book.html', 'img/books_all/putevoditel-po-lzhi.jpg', 'Критическое мышление в эпоху постправды', '630 р.')
+        div.catalog__item
+          +mini-card('Суперпобедители', 'book.html', 'img/books_all/superpotrebiteli.jpg', 'Кто это и почему они важны', '480 р.')
+        div.catalog__item
+          +mini-card('Дао физики', 'book.html', 'img/books_all/dao-fiziki.jpg', 'Исследование параллелей между современной физикой и восточной философией', '550 р.')
+        //- div.catalog__item
+        //-   +mini-card('Лидерство и самообман', 'book.html', 'img/books_all/liderstvo-i-samoobman.jpg', 'Жизнь, свободная от шор', '500 р.')
+        //- div.catalog__item
+        //-   +mini-card('Путеводитель по лжи', 'book.html', 'img/books_all/putevoditel-po-lzhi.jpg', 'Критическое мышление в эпоху постправды', '630 р.')
+        //- div.catalog__item
+        //-   +mini-card('Суперпобедители', 'book.html', 'img/books_all/superpotrebiteli.jpg', 'Кто это и почему они важны', '480 р.')
+        //- div.catalog__item
+        //-   +mini-card('Дао физики', 'book.html', 'img/books_all/dao-fiziki.jpg', 'Исследование параллелей между современной физикой и восточной философией', '550 р.')
+      div.pagination
+        a.pagination__item(href='') 1
+        a.pagination__item(href='') 2
+        a.pagination__item(href='') 3
+        a.pagination__item(href='') 4
+        a.pagination__item(href='') 5
+        span.pagination__item ...
+        a.pagination__item(href='') 10
+
+  section.delevery
+    div.delevery__inner
+      header.delevery__header
+        h2.delevery__title Доставим в любое место
+        p.delevery__descr ... или почти в любое
+      ul.delevery__list
+        li.delevery__item
+          svg(width='100', height='100')
+            use(xlink:href='img/sprite.svg#book')
+          p Покупайте книги на сайте в любом формате - бумажные, электронные или аудио
+        li.delevery__item
+          svg(width='100', height='100')
+            use(xlink:href='img/sprite.svg#box')
+          p Мы подарим вам «Набор читателя» и добавим в посылку
+        li.delevery__item
+          svg(width='100', height='100')
+            use(xlink:href='img/sprite.svg#truck')
+          p Бесплатно доставляем заказы от 3 000  по всей России
+        li.delevery__item
+          svg(width='100', height='100')
+            use(xlink:href='img/sprite.svg#pin')
+          p Доставка в более чем 300 городов России, по Москве и Санкт-Петербургу — бесплатно
+
+  section.products-more
+    header.products-more__header
+      h2.products-more__title Наши новинки
+      a.products-more__link(href='') Все новинки
+    div.products-more__list
+      div.products-more__item
+        +mini-card('Дао физики', 'book.html', 'img/books_all/dao-fiziki.jpg', 'Исследование параллелей между современной физикой и восточной философией')
+      div.products-more__item
+        +mini-card('Путеводитель по лжи', 'book.html', 'img/books_all/putevoditel-po-lzhi.jpg', 'Критическое мышление в эпоху постправды')
+      div.products-more__item
+        +mini-card('Лидерство и самообман', 'book.html', 'img/books_all/liderstvo-i-samoobman.jpg', 'Жизнь, свободная от шор')
+      div.products-more__item
+        +mini-card('Суперпобедители', 'book.html', 'img/books_all/superpotrebiteli.jpg', 'Кто это и почему они важны')
+
+
+
   //- input.btn(type='button', value='input')
   //- button.btn button
   //- a.btn(href='/') link
-  +mini-card('Лидерство и самообман', 'book.html', 'img/books_all/liderstvo-i-samoobman.jpg', 'Жизнь, свободная от шор', '500 р.')
-  +mini-card('Путеводитель по лжи', 'book.html', 'img/books_all/putevoditel-po-lzhi.jpg', 'Критическое мышление в эпоху постправды', '630 р.')
-  +mini-card('Дао физики', 'book.html', 'img/books_all/dao-fiziki.jpg', 'Исследование параллелей между современной физикой и восточной философией', '560 р.')
-  +mini-card('Дао физики', 'book.html', 'img/books_all/dao-fiziki.jpg', 'Исследование параллелей между современной физикой и восточной философией', '390 р.')
+
+
+  //- +mini-card('Дао физики', 'book.html', 'img/books_all/dao-fiziki.jpg', 'Исследование параллелей между современной физикой и восточной философией', '390 р.')
 
 

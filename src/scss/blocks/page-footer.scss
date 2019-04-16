@@ -1,0 +1,36 @@
+.page-footer {
+  display: block;
+  background-color: #fff;
+
+
+  &__inner {
+    display: flex;
+    justify-content: space-around;
+  }
+
+   * a {
+    display: flex;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $gray-dark;
+    font-weight: bold;
+  }
+
+  * p {
+    display: flex;
+    color: $gray;
+  }
+
+
+}
+
+.main-nav {
+
+  &__item a {
+    display: flex;
+    color: $gray-dark;
+    text-transform: lowercase;
+    text-decoration: none;
+    margin-left: 15px;
+  }
+}

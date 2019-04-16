@@ -1,8 +1,27 @@
-.mini-card__inner {
-  float: left;
-  margin: 20px;
+.mini-card {
+	display: flex;
+
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-decoration: none;
+    color: $gray-dark;
+  }
+
+  &__descr {
+    font-weight: 500;
+  }
+
+  *,
+  *:hover,
+  *:visited {
+  color: $gray-dark;
 }
 
-// .mini-card__inner {
-//   width: 335px;
-// }
+  &__price {
+    margin-top: auto;
+  }
+}
+

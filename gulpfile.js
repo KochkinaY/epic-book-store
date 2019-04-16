@@ -84,13 +84,14 @@ function compileStyles() {
     .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(postcss([
-      autoprefixer({browsers: ['last 2 version']}),
+      autoprefixer({browsers: ['last 2 version'], grid: true}),
     ]))
     .pipe(sourcemaps.write('/'))
     .pipe(dest(dir.build + 'css/'))
     .pipe(browserSync.stream());
 }
 exports.compileStyles = compileStyles;
+
 
 function processJs() {
   return src(dir.src + 'js/script.js')
@@ -109,6 +110,8 @@ function processJs() {
 }
 exports.processJs = processJs;
 
+
+
 function copyJsVendors() {
   return src([
       'node_modules/svg4everybody/dist/svg4everybody.min.js'
@@ -118,7 +121,10 @@ function copyJsVendors() {
 }
 
 function copyImages() {
-  return src(dir.src + 'img/**/*.{jpg,jpeg,png,svg,webp,gif}')
+  return src([
+      !dir.src + 'img/sprite-svg/*.*',
+      dir.src + 'img/**/*.{jpg,jpeg,png,svg,webp,gif}',
+    ])
     .pipe(dest(dir.build + 'img/'));
 }
 exports.copyImages = copyImages;

@@ -1,4 +1,7 @@
-// @mixin header-2 {
-//   margin: 0;
-//   font-size: $font-size-md;
-// }
+.mini-card {
+
+  &__price {
+    font-weight: bold;
+  }
+
+}

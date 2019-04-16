@@ -1,15 +1,25 @@
-.invitation__inner {
-  position: relative;
-  margin: 30px;
+.invitation {
+  background-image: url(/img/bg_rose.jpg);
+  background-size: auto;
+  height: 100%;
+
+
+  &__title {
+    color: #fff;
+    text-align: center;
+    font-size: $font-size-xl;
+    padding-top: 90px;
+
+  }
+
+  &__descr {
+    color: #fff;
+    text-align: center;
+    font-size: $font-size;
+    padding-bottom: 80px;
+  }
+
+
+
 }
-// .invitation__pict {
-//   position: absolute;
-// }
-// .invitation__title {
-//   position: absolute;
-//   color: #000;
-// }
-// .invitation__descr {
-//   position: absolute;
-//   color: #000;
-// }
+
