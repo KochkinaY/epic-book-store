@@ -16,7 +16,7 @@ block content
       table.book__table
         tr
           td.book__table-key Артикул:
-          td.bobook__table-val 1830720
+          td.book__table-val 1830720
         tr
           td.book__table-key В наличии:
           td.book__table-val 5 шт.
@@ -30,30 +30,44 @@ block content
       input(type='text', value='', size='4')
       span шт.
       button.btn__heart
-        svg(width='16', height='16')
-          use(xlink:href='img/sprite.svg#heart')
+       svg(width='20', height='20')
+         use(xlink:href='img/sprite.svg#heart')
       p 20 людям понравилась эта книга
       .book__desrc
-        h4.book__tittle Короткое описание
+        h4.book__title Короткое описание
       p В отличие от обычных покупателей суперпотребители очень заинтересованы в ваших товарах, а возможно, даже слегка помешаны на них.
       p Они знают о кроссовках всё и имеют десятки пар. Они спортивные фанаты c копиями футболок любимой команды, а стены их гаражей украшены подписанной символикой.
       button.swipe__btn Показать полностью
       button.social__btn(type='button')
-        svg(width='16', height='16')
+        svg(width='20', height='20')
           use(xlink:href='img/sprite.svg#facebook')
         span.social__btn__num 3
       button.social__btn(type='button')
-        svg(width='16', height='16')
+        svg(width='20', height='20')
           use(xlink:href='img/sprite.svg#vk')
         span.social__btn__num 8
       button.social__btn(type='button')
-        svg(width='16', height='16')
+        svg(width='20', height='20')
           use(xlink:href='img/sprite.svg#like')
         span.social__btn__num 13
       button.social__btn(type='button')
-        svg(width='16', height='16')
+        svg(width='20', height='20')
           use(xlink:href='img/sprite.svg#dislike')
         span.social__btn__num 4
+
+  section.books-theme
+    header.books-theme__header
+      h2.books-theme__title Книги по тематике
+      a.books-theme__link(href='') Больше книг по теме
+    div.books-theme__list
+      div.books-theme__item
+        +mini-card('Работа в радость', 'book.html', 'img/books_all/rabota-v-radost.jpg', 'Бизнес-модель будущего')
+      div.books-theme__item
+        +mini-card('Сделано, чтобы прилипать', 'book.html', 'img/books_all/sdelano-chtoby-prilipat.jpg', 'Почему одни идеи выживают, а другие умирают')
+      div.books-theme__item
+        +mini-card('Школа CEO', 'book.html', 'img/books_all/shkola-ceo.jpg', 'Мастер-класс от 20 глобальных бизнес-лидеров')
+      div.books-theme__item
+        +mini-card('Теория игр', 'book.html', 'img/books_all/teoriya-igr.jpg', 'Искусство стратегического мышления в бизнесе и жизни')
 
 
   +invitation('Мы открыли для вас уютную библиотеку', 'img/bg_rose.jpg', 'Приходите к нам по адресу Никитинская 10, каждый день с 12:00 до 18:00')

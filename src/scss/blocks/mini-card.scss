@@ -5,9 +5,15 @@
   &__inner {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    flex-wrap: wrap;
     text-decoration: none;
     color: $gray-dark;
+    padding: 0 20px;
+  }
+
+  &__item {
+
+
   }
 
   &__descr {
