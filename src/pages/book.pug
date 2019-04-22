@@ -5,55 +5,71 @@ block meta
   meta(name='description', content='')
 
 
+    //- article.book
+    //- header.book__header Автор, название
+    //- div.book__images Изображения
+    //- div.book__pages Страницы
+    //- div.book__info = book__table
+    //- div.book__descr Описание
+
+
 block content
 
   article.book
-    .book__inner
-      img.book(src='img/books_all/superpotrebiteli.jpg', alt='', width='', height='')
-      h3.book__avtor Эдди Юн
-      h1.book__title Суперпотребители
-      p.book__descr Кто это и почему они важны для вашего бизнеса
-      table.book__table
-        tr
-          td.book__table-key Артикул:
-          td.book__table-val 1830720
-        tr
-          td.book__table-key В наличии:
-          td.book__table-val 5 шт.
-        tr
-          td.book__table-key Издательство:
-          td.book__table-val МИФ
-        tr
-          td.book__table-key Цена:
-          td.book__table-val 800 р.
-      button.btn Добавить в корзину
-      input(type='text', value='', size='4')
-      span шт.
-      button.btn__heart
-       svg(width='20', height='20')
-         use(xlink:href='img/sprite.svg#heart')
-      p 20 людям понравилась эта книга
-      .book__desrc
+      header.book__header
+        h3.book__avtor Эдди Юн
+        h1.book__title Суперпотребители
+        p.book__mini-descr Кто это и почему они важны для вашего бизнеса
+      div.book__images
+        img.book(src='img/books_all/superpotrebiteli.jpg', alt='', width='360px', height='507px')
+      div.book__pages
+        img.page(src='img/books_all/contents.jpg', alt='', width='110px', height='158px')
+        img.page(src='img/books_all/page-1.jpg', alt='', width='', height='')
+        img.page(src='img/books_all/page-2.jpg', alt='', width='', height='')
+      div.book__info
+        table.book__table
+          tr
+            td.book__table-key Артикул:
+            td.book__table-val 1830720
+          tr
+            td.book__table-key В наличии:
+            td.book__table-val 5 шт.
+          tr
+            td.book__table-key Издательство:
+            td.book__table-val МИФ
+          tr
+            td.book__table-key Цена:
+            td.book__table-val 800 р.
+        button.btn Добавить в корзину
+        input(type='text', value='', size='4')
+        span шт.
+        button.btn__heart
+         svg(width='20', height='20')
+           use(xlink:href='img/sprite.svg#heart')
+         span 20 людям понравилась эта книга
+      div.book__descr
         h4.book__title Короткое описание
-      p В отличие от обычных покупателей суперпотребители очень заинтересованы в ваших товарах, а возможно, даже слегка помешаны на них.
-      p Они знают о кроссовках всё и имеют десятки пар. Они спортивные фанаты c копиями футболок любимой команды, а стены их гаражей украшены подписанной символикой.
-      button.swipe__btn Показать полностью
-      button.social__btn(type='button')
+        p В отличие от обычных покупателей суперпотребители очень заинтересованы в ваших товарах, а возможно, даже слегка помешаны на них.
+        p Они знают о кроссовках всё и имеют десятки пар. Они спортивные фанаты c копиями футболок любимой команды, а стены их гаражей украшены подписанной символикой.
+        button.swipe__btn Показать полностью
         svg(width='20', height='20')
-          use(xlink:href='img/sprite.svg#facebook')
-        span.social__btn__num 3
-      button.social__btn(type='button')
-        svg(width='20', height='20')
-          use(xlink:href='img/sprite.svg#vk')
-        span.social__btn__num 8
-      button.social__btn(type='button')
-        svg(width='20', height='20')
-          use(xlink:href='img/sprite.svg#like')
-        span.social__btn__num 13
-      button.social__btn(type='button')
-        svg(width='20', height='20')
-          use(xlink:href='img/sprite.svg#dislike')
-        span.social__btn__num 4
+          use(xlink:href='img/sprite.svg#down')
+        button.social__btn(type='button')
+          svg(width='20', height='20')
+            use(xlink:href='img/sprite.svg#facebook')
+          span.social__btn__num 3
+        button.social__btn(type='button')
+          svg(width='20', height='20')
+            use(xlink:href='img/sprite.svg#vk')
+          span.social__btn__num 8
+        button.social__btn(type='button')
+          svg(width='20', height='20')
+            use(xlink:href='img/sprite.svg#like')
+          span.social__btn__num 13
+        button.social__btn(type='button')
+          svg(width='20', height='20')
+            use(xlink:href='img/sprite.svg#dislike')
+          span.social__btn__num 4
 
   section.books-theme
     header.books-theme__header

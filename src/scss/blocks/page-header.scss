@@ -8,7 +8,7 @@
 		justify-content: space-around;
 }
 
-  * a {
+  a {
     display: flex;
     align-self: center;
     text-transform: uppercase;
@@ -17,7 +17,7 @@
     font-weight: bold;
   }
 
-  * p {
+  p {
     display: flex;
     color: $gray;
 
@@ -40,6 +40,7 @@
   &__phone-number {
     display: none;
 
+
   }
 
   &__list {
@@ -51,11 +52,11 @@
     align-content: flex-end;
     text-decoration: none;
     text-transform: lowercase;
-    padding: 0 10px;
+    margin-left: 30px;
     color: $gray-dark;
   }
 
-  &__item a {
+  a {
     display: flex;
     align-content: flex-end;
     color: $gray-dark;
@@ -64,7 +65,7 @@
     text-decoration: none;
   }
 
-  &__item a:hover {
+  a:hover {
         display: flex;
         color: $main-color;
   }

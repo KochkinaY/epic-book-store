@@ -1,6 +1,7 @@
 .field-checkbox {
   display:block;
 
+
   &__input {
     width:1px;
     height:1px;
@@ -11,6 +12,11 @@
   }
 
   &__text {
+
+    a {
+    text-decoration: none;
+  }
+
     position:relative;
     display: block;
     padding-left:28px;
