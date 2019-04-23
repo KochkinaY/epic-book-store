@@ -1,0 +1,191 @@
+
+.reco {
+  margin: auto;
+  padding: 30px;
+  text-decoration: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "reco__article"
+    "reco__photo"
+    "reco__bestbook"
+    "reco__opinion"
+    "reco__forkids"
+    "reco__oldbooks"
+    "book__gift";
+
+   @media (min-width: 768px) {
+    max-width: 760px;
+    display: grid;
+    grid-template-columns: 3fr 5fr;
+
+    // grid-template-areas:
+    // // "reco__article   reco__bestbook"
+    // // "reco__opinion    reco__bestbook"
+    // // "book__pages   book__info"
+    // // ".             book__info"
+    // // "book__descr   book__descr";
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 1160px;
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr 3fr;
+    grid-template-rows: repeat(4, 160px);
+    grid-gap: 20px;
+    grid-template-areas:
+    "reco__article   reco__bestbook  reco__bestbook   book__gift"
+    "reco__photo     reco__bestbook  reco__bestbook   book__gift"
+    "reco__photo     reco__opinion   reco__forkids    book__gift"
+    "reco__oldbooks  reco__oldbooks  reco__oldbooks   book__gift";
+  }
+
+
+  &__article {
+    grid-area: reco__article;
+    background-color: $bg-reco-color;
+    font-weight: 500;
+    width: 250px;
+    padding: 10px 15px;
+
+    a {
+    color: $link-color;
+    text-decoration: none;
+    }
+
+    &-title {
+    font-weight: 600;
+    font-size: $font-size;
+    }
+
+    &-descr {
+    font-size: $font-size-sm;
+    }
+
+  }
+
+  &__photo {
+    grid-area: reco__photo;
+    font-weight: 500;
+    background-image: url(/img/photo.jpg);
+    text-align: center;
+    width: 250px;
+
+    a {
+    color: $bg-reco-color;
+    text-decoration: none;
+    }
+
+  &-text {
+    font-weight: 500;
+    font-size: $font-size-md;
+    padding: 90px 0;
+    }
+  }
+
+
+
+  &__bestbook {
+    grid-area: reco__bestbook;
+    font-weight: 500;
+    background-image: url(/img/bestbooks.jpg);
+    background-size: cover;
+    color: $bg-reco-color;
+    text-align: center;
+
+     a {
+    color: $bg-reco-color;
+    text-decoration: none;
+    }
+
+    &-title {
+    font-weight: 600;
+    font-size: $font-size-md;
+    padding-top: 10px;
+    }
+
+    &-descr {
+    font-size: $font-size;
+    }
+  }
+
+  &__opinion {
+    grid-area: reco__opinion;
+    background-color: $bg-reco-color;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 0 10px;
+
+    &-title {
+    font-weight: 600;
+    font-size: $font-size;
+    padding: 0 10px;
+    }
+
+    &-descr {
+    font-size: $font-size-sm;
+    padding: 0 10px;
+    }
+
+  }
+
+  &__forkids {
+    grid-area: reco__forkids;
+    background-color: $main-color;
+    color: $bg-reco-color;
+    font-weight: 500;
+    text-decoration: none;
+    width: 250px;
+    padding: 10px 12px;
+
+    &-title {
+    font-weight: 600;
+    font-size: $font-size;
+    }
+
+    &-descr {
+    font-size: $font-size-sm;
+    }
+  }
+
+  &__oldbooks {
+    grid-area: reco__oldbooks;
+    font-weight: 500;
+    background-image: url(/img/oldbooks.jpg);
+    background-size: cover;
+    color: $bg-reco-color;
+    text-align: center;
+
+     a {
+    color: $bg-reco-color;
+    text-decoration: none;
+    }
+
+    &-title {
+    font-weight: 600;
+    font-size: $font-size-md;
+    padding-top: 15px;
+    }
+
+    &-descr {
+    font-size: $font-size;
+    }
+  }
+}
+
+.book-gift {
+    &__gift {
+      grid-area: book__gift;
+
+    &-title {
+    font-weight: 600;
+    font-size: $font-size;
+    }
+
+    &-descr {
+    font-size: $font-size-sm;
+    padding: 20px 0;
+    }
+}
+}
+

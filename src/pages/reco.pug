@@ -6,5 +6,37 @@ block meta
 
 
 block content
+
   h1 Наши рекомендации
-  +invitation('Мы открыли для вас уютную библиотеку', 'img/bg_rose.jpg', 'Приходите к нам по адресу Никитинская 10, каждый день с 12:00 до 18:00')
+  article.reco
+      div.reco__article
+        p.reco__article-title Новая статья в блоге
+        p.reco__article-descr Посмотрите, как чтение книг меняет восприятие человека
+        a.reco__article-link(href='') Читать статью
+      div.reco__photo
+        a.reco__photo-link(href='')
+          p.reco__photo-text Наша подборка Ваших лучших фотографий
+      div.reco__bestbook
+        a.reco__bestbook-link(href='')
+          p.reco__bestbook-title Книга осени!
+          p.reco__bestbook-descr Проголосуй за лучшую книгу этой осени
+      div.reco__opinion
+        p.reco__opinion-title Нам важно Ваше мнение
+        p.reco__opinion-descr Голосуйте, ставьте пальцы вверх!
+        button.btn Проголосовать
+      div.reco__forkids
+        p.reco__forkids-title Книги для детей
+        p.reco__forkids-descr У нас появился новый раздел, в котором мы подбираем книги для юных читателей
+      div.reco__oldbooks
+        a.reco__oldbooks-link(href='')
+          p.reco__oldbooks-title У вас есть старые книги?
+          p.reco__oldbooks-descr Приносите их нам и обменяйте на новые
+
+      section.book__gift
+         div.book__gift
+            p.book__gift-title Книга в подарок!
+            p.book__gift-descr При вашем новом заказе мы подарим вам книгу
+            +mini-card('Путеводитель по лжи', 'book.html', 'img/books_all/putevoditel-po-lzhi.jpg', 'Критическое мышление в эпоху постправды')
+
+
+  +invitation
