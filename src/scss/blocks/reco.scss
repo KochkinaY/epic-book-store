@@ -84,7 +84,6 @@
   }
 
 
-
   &__bestbook {
     grid-area: reco__bestbook;
     font-weight: 500;
@@ -173,9 +172,9 @@
   }
 }
 
-.book-gift {
-    &__gift {
-      grid-area: book__gift;
+.book__gift {
+
+    grid-area: book__gift;
 
     &-title {
     font-weight: 600;
@@ -183,9 +182,9 @@
     }
 
     &-descr {
-    font-size: $font-size-sm;
-    padding: 20px 0;
+    font-size: $font-size;
+    padding: 7px 0 20px 0;
     }
 }
-}
+
 

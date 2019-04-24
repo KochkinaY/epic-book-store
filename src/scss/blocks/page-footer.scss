@@ -22,10 +22,15 @@
     color: $gray;
   }
 
-
 }
 
 .main-nav {
+
+  &__list {
+    display: flex;
+    align-content: flex-end;
+  }
+
 
   a {
     display: flex;

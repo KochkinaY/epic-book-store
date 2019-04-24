@@ -1,12 +1,11 @@
 .field-text {
-  position: relative;
+
   padding: 18px 40px 0 0px;
 
   &__input {
-    display: block;
     width: 360px;
     height:32px;
-    margin: 0;
+    margin-top: 14px;
     padding: 0;
     border: none;
     border-bottom: 4px solid $gray-light;
@@ -31,7 +30,6 @@
 
 
   &__msg {
-    position: absolute;
     top: 6px;
     left: 0;
     font-size: $font-size-sm;

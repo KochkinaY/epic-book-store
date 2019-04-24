@@ -1,5 +1,5 @@
 .field-checkbox {
-  display:block;
+
 
 
   &__input {
@@ -19,9 +19,11 @@
 
     position:relative;
     display: block;
-    padding-left:28px;
+    padding-left: 35px;
     font-size: $font-size;
     line-height:1.714em;
+    font-weight: 500;
+    margin-top: 15px;
 
     &:before {
       content:'';
