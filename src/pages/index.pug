@@ -7,21 +7,17 @@ block meta
 
 block content
   section.promo.slider
+    h2.promo__title Слайдер
     div.promo__inner
       div.promo__item
         p.promo__item-descr Новое поступление книги «Симпсоны и их математические системы»
         div.promo__item-text
           p.promo__item-pseudotitle Для поклонников сериала «Симпсоны» и для всех, кому интересна математика
-          a.promo__item-more(href='') Хочу узнать о книге больше
+          a.promo__item-more(href='book.html') Хочу узнать о книге больше
       img.promo__item-img(src='img/books_all/simpsony-i-ikh-matematicheskie-sekrety.jpg', alt='', width='300', height='422')
 
-    //- div.promo__right-arrow
-    //-  svg(width='50', height='50')
-    //-     use(xlink:href='img/sprite.svg#right')
-
-
   section.catalog
-    h2.catalog__title
+    h2.catalog__title Каталог
     div.tabs
       ul.tabs__list
         li.tabs__item
@@ -86,24 +82,18 @@ block content
           p Доставка в более чем 300 городов России, по Москве и Санкт-Петербургу — бесплатно
 
   section.products-more
-    header.products-more__header
-      h2.products-more__title Наши новинки
-      a.products-more__link(href='') Все новинки
-    div.products-more__list
-      div.products-more__item
-        +mini-card('Кому нужна математика?', 'book.html', 'img/books_all/komu-nuzhna-matematika.jpg', 'Понятная книга о том, как устроен цифровой мир')
-      div.products-more__item
-        +mini-card('Непринятие перемен', 'book.html', 'img/books_all/nepriyatie-peremen.jpg', 'Как преодолеть сопротивление изменениям')
-      div.products-more__item
-        +mini-card('Основы каллиграфии и леттеринга', 'book.html', 'img/books_all/osnovy-kalligrafii-i-letteringa.jpg', 'Прописи')
-      div.products-more__item
-        +mini-card('Психология', 'book.html', 'img/books_all/psikhologiya.jpg', 'Люди, концепции, эксперименты')
-
-
-
-  //- input.btn(type='button', value='input')
-  //- button.btn button
-  //- a.btn(href='/') link
-
+    div.products-more__inner
+      header.products-more__header
+        h2.products-more__title Наши новинки
+        a.products-more__link(href='') Все новинки
+      div.products-more__list
+        div.products-more__item
+          +mini-card('Кому нужна математика?', 'book.html', 'img/books_all/komu-nuzhna-matematika.jpg', 'Понятная книга о том, как устроен цифровой мир')
+        div.products-more__item
+          +mini-card('Непринятие перемен', 'book.html', 'img/books_all/nepriyatie-peremen.jpg', 'Как преодолеть сопротивление изменениям')
+        div.products-more__item
+          +mini-card('Основы каллиграфии и леттеринга', 'book.html', 'img/books_all/osnovy-kalligrafii-i-letteringa.jpg', 'Прописи')
+        div.products-more__item
+          +mini-card('Психология', 'book.html', 'img/books_all/psikhologiya.jpg', 'Люди, концепции, эксперименты')
 
 

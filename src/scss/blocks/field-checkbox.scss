@@ -1,6 +1,6 @@
 .field-checkbox {
-
-
+   display: block;
+   position: relative;
 
   &__input {
     width:1px;
@@ -11,42 +11,75 @@
     z-index: -1;
   }
 
-  &__text {
-
-    a {
-    text-decoration: none;
-  }
-
-    position:relative;
-    display: block;
-    padding-left: 35px;
-    font-size: $font-size;
-    line-height:1.714em;
-    font-weight: 500;
-    margin-top: 15px;
-
+  &__pseudo-checkbox {
     &:before {
-      content:'';
-      position:absolute;
+      content: '';
+      position: absolute;
       top: 2px;
       left: 0;
       width: 20px;
       height: 20px;
       border:4px solid $gray-light;
       transition:all 0.3s;
-     }
+  }
 
-    &:hover:before {
-      content:'';
-      position:absolute;
-      top: 2px;
-      left: 0;
-      width: 20px;
-      height: 20px;
-      border:4px solid $gray-light;
+  input:focus ~ &:before,
+  &:hover:before {
+    border-color: $main-color;
+  }
+
+  input:checked ~ &:before {
+    border-color: $gray-light;
+    background: $gray-light;
+  }
+
+  &:after{
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 4px;
+    width: 12px;
+    height: 6px;
+    border-left: 2px solid $main-color;
+    border-bottom: 2px solid $main-color;
+    transform: rotate(-45deg);
+    transition: all 0.3s;
+    opacity: 0;
+  }
+
+  input:checked ~ &:after {
+    opacity: 1;
+  }
+  }
+
+  &__text {
+    a {
+    text-decoration: none;
     }
+    display: block;
+    padding-left: 35px;
+    font-size: $font-size;
+    line-height:1.714em;
+    font-weight: 500;
   }
 
   &__msg {}
+}
 
+.book {
+
+  input {
+    border: none;
+    outline: none;
+    background-color: $gray-light;
+    width: 80px;
+    height: 48px;
+    margin: 0 15px 0 20px;
+    padding: 0;
+  }
+
+  span {
+     font-size: $font-size;
+     font-weight: 500;
+  }
 }

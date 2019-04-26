@@ -1,18 +1,32 @@
 .form {
- border: 8px solid $gray-lighten;
- margin: 30px;
- padding: 25px;
+    background: linear-gradient(to right, $gray-lighten 0%, $gray-lighten 20%, transparent 20%, transparent 80%, $gray-lighten 80%, $gray-lighten 100%),
+                   linear-gradient(to right, $gray-lighten 0%, $gray-lighten 20%, transparent 20%, transparent 80%, $gray-lighten 80%, $gray-lighten 100%),
+                   linear-gradient(to bottom, $gray-lighten 0%, $gray-lighten 20%, $gray-lighten 80%, $gray-lighten 100%),
+                   linear-gradient(to bottom, $gray-lighten 0%, $gray-lighten 20%, $gray-lighten 80%, $gray-lighten 100%);
+    background-size: 100% 8px, 100% 8px, 8px 100%, 8px 100%;
+    background-position: 0 0, 0 100%, 0 0, 100% 0;
+    background-repeat: no-repeat;
+    margin: 30px;
+    padding: 45px 100px;
 
-    &__container {
-      display: flex;
-      flex-wrap: wrap;
-    }
+      &__container {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 30px 0;
+      }
 
-    &__title {}
+      &__title {}
 
-    &__descr p {
-      font-weight: 500;
-    }
+      &__descr p {
+        font-weight: 500;
+      }
 
+      &--contacts {
 
+        &__checkbox {}
+
+        .form__checkbox {
+          order: 1;
+        }
+      }
 }

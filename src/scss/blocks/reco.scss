@@ -1,4 +1,3 @@
-
 .reco {
   margin: auto;
   padding: 30px;
@@ -14,25 +13,35 @@
     "reco__oldbooks"
     "book__gift";
 
-   @media (min-width: 768px) {
+  @media (min-width: $screen-xs) {
     max-width: 760px;
     display: grid;
-    grid-template-columns: 3fr 5fr;
-
-    // grid-template-areas:
-    // // "reco__article   reco__bestbook"
-    // // "reco__opinion    reco__bestbook"
-    // // "book__pages   book__info"
-    // // ".             book__info"
-    // // "book__descr   book__descr";
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "reco__article"
+    "reco__bestbook"
+    "reco__opinion";
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: $screen-sm) {
     max-width: 1160px;
+    display: grid;
+    grid-template-columns: 3fr 5fr;
+    grid-template-rows: repeat(4, 160px);
+    grid-gap: 20px;
+    grid-template-areas:
+    "reco__article   reco__bestbook"
+    "reco__photo     reco__bestbook"
+    "reco__photo     reco__opinion"
+    "reco__oldbooks  reco__oldbooks";
+  }
+
+  @media (min-width: $screen-lg) {
+    max-width: 1280px;
     display: grid;
     grid-template-columns: 3fr 3fr 3fr 3fr;
     grid-template-rows: repeat(4, 160px);
-    grid-gap: 20px;
+    grid-gap: 30px;
     grid-template-areas:
     "reco__article   reco__bestbook  reco__bestbook   book__gift"
     "reco__photo     reco__bestbook  reco__bestbook   book__gift"
@@ -41,150 +50,154 @@
   }
 
 
-  &__article {
-    grid-area: reco__article;
-    background-color: $bg-reco-color;
-    font-weight: 500;
-    width: 250px;
-    padding: 10px 15px;
+      &__article {
+        grid-area: reco__article;
+        background-color: $bg-reco-color;
+        font-weight: 500;
+        width: 250px;
+        padding: 10px 15px;
+      }
 
-    a {
-    color: $link-color;
-    text-decoration: none;
-    }
+      &__article-title {
+        font-weight: 600;
+        font-size: $font-size;
+      }
 
-    &-title {
-    font-weight: 600;
-    font-size: $font-size;
-    }
+      &__article-descr {
+        font-size: $font-size-sm;
+      }
 
-    &-descr {
-    font-size: $font-size-sm;
-    }
-
-  }
-
-  &__photo {
-    grid-area: reco__photo;
-    font-weight: 500;
-    background-image: url(/img/photo.jpg);
-    text-align: center;
-    width: 250px;
-
-    a {
-    color: $bg-reco-color;
-    text-decoration: none;
-    }
-
-  &-text {
-    font-weight: 500;
-    font-size: $font-size-md;
-    padding: 90px 0;
-    }
-  }
+      &__article-link {
+        color: $link-color;
+        text-decoration: none;
+      }
 
 
-  &__bestbook {
-    grid-area: reco__bestbook;
-    font-weight: 500;
-    background-image: url(/img/bestbooks.jpg);
-    background-size: cover;
-    color: $bg-reco-color;
-    text-align: center;
+      &__photo {
+        grid-area: reco__photo;
+        font-weight: 500;
+        background-image: url(/img/photo.jpg);
+        text-align: center;
+        width: 250px;
+      }
 
-     a {
-    color: $bg-reco-color;
-    text-decoration: none;
-    }
+      a {
+        color: $bg-reco-color;
+        text-decoration: none;
+      }
 
-    &-title {
-    font-weight: 600;
-    font-size: $font-size-md;
-    padding-top: 10px;
-    }
+      &__photo-text {
+        font-weight: 500;
+        font-size: $font-size-md;
+        padding: 90px 0;
+      }
 
-    &-descr {
-    font-size: $font-size;
-    }
-  }
 
-  &__opinion {
-    grid-area: reco__opinion;
-    background-color: $bg-reco-color;
-    font-weight: 500;
-    text-decoration: none;
-    padding: 0 10px;
+      &__bestbook {
+        grid-area: reco__bestbook;
+        font-weight: 500;
+        background-image: url(/img/bestbooks.jpg);
+        background-size: cover;
+        color: $bg-reco-color;
+        text-align: center;
+      }
 
-    &-title {
-    font-weight: 600;
-    font-size: $font-size;
-    padding: 0 10px;
-    }
+      a {
+        color: $bg-reco-color;
+        text-decoration: none;
+      }
 
-    &-descr {
-    font-size: $font-size-sm;
-    padding: 0 10px;
-    }
+      &__bestbook-title {
+        font-weight: 600;
+        font-size: $font-size-md;
+        padding-top: 10px;
+      }
 
-  }
+      &__bestbook-descr {
+        font-size: $font-size;
+      }
 
-  &__forkids {
-    grid-area: reco__forkids;
-    background-color: $main-color;
-    color: $bg-reco-color;
-    font-weight: 500;
-    text-decoration: none;
-    width: 250px;
-    padding: 10px 12px;
 
-    &-title {
-    font-weight: 600;
-    font-size: $font-size;
-    }
+      &__opinion {
+        grid-area: reco__opinion;
+        background-color: $bg-reco-color;
+        font-weight: 500;
+        text-decoration: none;
+        padding: 0 10px;
+      }
 
-    &-descr {
-    font-size: $font-size-sm;
-    }
-  }
+      &__opinion-title {
+        font-weight: 600;
+        font-size: $font-size;
+        padding: 0 10px;
+      }
 
-  &__oldbooks {
-    grid-area: reco__oldbooks;
-    font-weight: 500;
-    background-image: url(/img/oldbooks.jpg);
-    background-size: cover;
-    color: $bg-reco-color;
-    text-align: center;
+      &__opinion-descr {
+        font-size: $font-size-sm;
+        padding: 0 10px;
+      }
 
-     a {
-    color: $bg-reco-color;
-    text-decoration: none;
-    }
 
-    &-title {
-    font-weight: 600;
-    font-size: $font-size-md;
-    padding-top: 15px;
-    }
+      &__forkids {
+        grid-area: reco__forkids;
+        background-color: $main-color;
+        color: $bg-reco-color;
+        font-weight: 500;
+        text-decoration: none;
+        width: 300px;
+        padding: 15px 20px;
+      }
 
-    &-descr {
-    font-size: $font-size;
-    }
-  }
+      &__forkids-title {
+        font-weight: 600;
+        font-size: $font-size;
+      }
+
+      &__forkids-descr {
+        font-size: $font-size-sm;
+      }
+
+
+      &__oldbooks {
+        grid-area: reco__oldbooks;
+        font-weight: 500;
+        background-image: url(/img/oldbooks.jpg);
+        background-size: cover;
+        color: $bg-reco-color;
+        text-align: center;
+      }
+
+      a {
+        color: $bg-reco-color;
+        text-decoration: none;
+      }
+
+      &__oldbooks-title {
+        font-weight: 600;
+        font-size: $font-size-md;
+        padding-top: 15px;
+      }
+
+      &__oldbooks-descr {
+        font-size: $font-size;
+      }
 }
 
-.book__gift {
 
-    grid-area: book__gift;
+  .book {
+      grid-area: book__gift;
 
-    &-title {
-    font-weight: 600;
-    font-size: $font-size;
-    }
 
-    &-descr {
-    font-size: $font-size;
-    padding: 7px 0 20px 0;
-    }
-}
+        &__gift-title {
+        font-weight: 600;
+        font-size: $font-size;
+        padding: 25px 0 0 0;
+        }
+
+        &__gift-descr {
+        font-size: $font-size;
+        padding: 7px 0 20px 0;
+        }
+  }
 
 

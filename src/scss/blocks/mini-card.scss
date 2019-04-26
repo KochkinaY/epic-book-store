@@ -1,33 +1,29 @@
 .mini-card {
-	display: flex;
 
+	 display: flex;
 
-  &__inner {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    text-decoration: none;
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      text-decoration: none;
+      color: $gray-dark;
+    }
+
+    &__item {}
+
+    &__descr {
+      font-weight: 500;
+    }
+
+    *,
+    *:hover,
+    *:visited {
     color: $gray-dark;
-
   }
 
-  &__item {
-
-
-  }
-
-  &__descr {
-    font-weight: 500;
-  }
-
-  *,
-  *:hover,
-  *:visited {
-  color: $gray-dark;
-}
-
-  &__price {
-    margin-top: auto;
-  }
+    &__price {
+      margin-top: auto;
+    }
 }
 

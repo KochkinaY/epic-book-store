@@ -1,0 +1,19 @@
+h1 {
+     margin: 50px 50px 10px 150px;
+  }
+
+.map {
+
+    &__location-list {
+      display: flex;
+      justify-content: flex-start;
+      font-weight: 500;
+    }
+
+    &__location-item {
+      margin: 20px 0 40px 130px;
+    }
+}
+
+
+

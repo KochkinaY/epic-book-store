@@ -1,4 +1,5 @@
 .book {
+
   margin: 25px 0 0 60px;
   display: grid;
   grid-template-columns: 1fr;
@@ -8,7 +9,7 @@
     "book__info"
     "book__descr";
 
-   @media (min-width: 768px) {
+  @media (min-width: 768px) {
     max-width: 760px;
     display: grid;
     grid-template-columns: 3fr 5fr;
@@ -33,107 +34,82 @@
     ".             book__descr   book__descr";
   }
 
-  &__header {
-    grid-area: book__header;
-    margin-top: 8px;
-  }
-
-  &__images {
-    grid-area: book__images;
-    margin-right: 40px;
-  }
-
-  &__pages {
-    grid-area: book__pages;
-    width: 170px;
-    height: 505px;
-    margin-top: 25px;
-    margin-left: 20px;
-    padding: 15px 25px 0 25px;
-    border: 4px solid $gray-lighten;
-  }
-
-  &__info {
-    grid-area: book__info;
-    width: 500px;
-  }
-
-  &__descr {
-    grid-area: book__descr;
-    font-size: $font-size;
-    font-weight: 500;
-    width: 730px;
-    margin-left: 60px;
-    margin-top: 20px;
-  }
-
-
-  &__avtor {
-    font-size: $font-size-sm;
-    font-weight: 600;
-  }
-
-  h1 {
-    margin: 0 auto;
-    font-size: $font-size-xl;
-
-  }
-
-  &__mini-descr {
-    font-weight: 500;
-
-  }
-
-  &__table {
-      padding: 40px 0 45px 0;
-
+    &__header {
+      grid-area: book__header;
+      margin-top: 8px;
     }
 
-
-  &__table-key {
-    font-weight: 500;
-    color: $gray;
-    padding: 10px 40px 0 0;
-
-  }
-
-  &__table-val {
-    font-weight: 600;
-    padding: 10px 40px 0 0;
-
-  }
-
-   &__pages img {
-    width: 110px;
-    height: 158px;
-    padding-bottom: 8px;
-    min-width: 0;
-  }
-
-  input {
-    border: none;
-    outline: none;
-    background-color: $gray-light;
-    width: 70px;
-    height: 49px;
-    margin: 0 20px;
-    padding: 0;
-
-  }
-
-  span {
-     font-size: $font-size;
-     font-weight: 600;
-
+    &__images {
+      grid-area: book__images;
+      margin-right: 40px;
     }
 
-
-  &__title {
-    font-size: $font-size-md;
-
+    &__pages {
+      grid-area: book__pages;
+      width: 170px;
+      height: 505px;
+      margin-top: 25px;
+      margin-left: 20px;
+      padding: 15px 25px 0 25px;
+      border: 4px solid $gray-lighten;
     }
 
-.swipe__btn {
+    &__info {
+      grid-area: book__info;
+      width: 500px;
+    }
+
+    &__descr {
+      grid-area: book__descr;
+      font-size: $font-size;
+      font-weight: 500;
+      width: 730px;
+      margin-left: 60px;
+      margin-top: 20px;
+    }
+
+    &__avtor {
+      font-size: $font-size-sm;
+      font-weight: 600;
+    }
+
+    h1 {
+      margin: 0 auto;
+      font-size: $font-size-xl;
+    }
+
+    &__mini-descr {
+      font-weight: 500;
+    }
+
+    &__table {
+        padding: 40px 0 45px 0;
+    }
+
+    &__table-key {
+      font-weight: 500;
+      color: $gray;
+      padding: 10px 40px 0 0;
+    }
+
+    &__table-val {
+      font-weight: 600;
+      padding: 10px 40px 0 0;
+    }
+
+    &__pages img {
+      width: 110px;
+      height: 158px;
+      padding-bottom: 8px;
+      min-width: 0;
+    }
+
+    &__title {
+      font-size: $font-size-md;
+    }
+
+.book-more__btn {
+
     border: none;
     outline: none;
     background-color: transparent;
@@ -141,7 +117,7 @@
     font-weight: 600;
     font-size: $font-size;
     font-family: inherit;
-    margin-top: 30px;
+    margin: 30px 0 45px 0;
     padding: 0;
     cursor: pointer;
 
@@ -150,9 +126,7 @@
       outline: none;
       background-color: transparent;
       color: $link-color;
-      padding: 0 25px;
+      margin: 0px 0 0 15px;
     }
-
 }
-
 }

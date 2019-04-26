@@ -5,14 +5,6 @@ block meta
   meta(name='description', content='')
 
 
-    //- article.book
-    //- header.book__header Автор, название
-    //- div.book__images Изображения
-    //- div.book__pages Страницы
-    //- div.book__info = book__table
-    //- div.book__descr Описание
-
-
 block content
 
   article.book
@@ -51,40 +43,41 @@ block content
         h4.book__title Короткое описание
         p В отличие от обычных покупателей суперпотребители очень заинтересованы в ваших товарах, а возможно, даже слегка помешаны на них.
         p Они знают о кроссовках всё и имеют десятки пар. Они спортивные фанаты c копиями футболок любимой команды, а стены их гаражей украшены подписанной символикой.
-        button.swipe__btn Показать полностью
-        svg(width='20', height='20')
-          use(xlink:href='img/sprite.svg#down')
-        button.social__btn(type='button')
-          svg(width='20', height='20')
-            use(xlink:href='img/sprite.svg#facebook')
-          span.social__btn__num 3
-        button.social__btn(type='button')
-          svg(width='20', height='20')
-            use(xlink:href='img/sprite.svg#vk')
-          span.social__btn__num 8
-        button.social__btn(type='button')
-          svg(width='20', height='20')
-            use(xlink:href='img/sprite.svg#like')
-          span.social__btn__num 13
-        button.social__btn(type='button')
-          svg(width='20', height='20')
-            use(xlink:href='img/sprite.svg#dislike')
-          span.social__btn__num 4
+        button.book-more__btn Показать полностью
+          svg(width='14', height='14')
+            use(xlink:href='img/sprite.svg#down')
+        div.book__social.social
+          button.social__btn(type='button')
+            svg(width='20', height='20')
+              use(xlink:href='img/sprite.svg#facebook')
+            span.social__btn__num 3
+          button.social__btn(type='button')
+            svg(width='20', height='20')
+              use(xlink:href='img/sprite.svg#vk')
+            span.social__btn__num 8
+          button.social__btn(type='button')
+            svg(width='20', height='20')
+              use(xlink:href='img/sprite.svg#like')
+            span.social__btn__num 13
+          button.social__btn(type='button')
+            svg(width='20', height='20')
+              use(xlink:href='img/sprite.svg#dislike')
+            span.social__btn__num 4
 
   section.books-theme
-    header.books-theme__header
-      h2.books-theme__title Книги по тематике
-      a.books-theme__link(href='') Больше книг по теме
-    div.books-theme__list
-      div.books-theme__item
-        +mini-card('Работа в радость', 'book.html', 'img/books_all/rabota-v-radost.jpg', 'Бизнес-модель будущего')
-      div.books-theme__item
-        +mini-card('Сделано, чтобы прилипать', 'book.html', 'img/books_all/sdelano-chtoby-prilipat.jpg', 'Почему одни идеи выживают, а другие умирают')
-      div.books-theme__item
-        +mini-card('Школа CEO', 'book.html', 'img/books_all/shkola-ceo.jpg', 'Мастер-класс от 20 глобальных бизнес-лидеров')
-      div.books-theme__item
-        +mini-card('Теория игр', 'book.html', 'img/books_all/teoriya-igr.jpg', 'Искусство стратегического мышления в бизнесе и жизни')
-
+    div.books-theme__inner
+      header.books-theme__header
+        h2.books-theme__title Книги по тематике
+        a.books-theme__link(href='') Больше книг по теме
+      div.books-theme__list
+        div.books-theme__item
+          +mini-card('Работа в радость', 'book.html', 'img/books_all/rabota-v-radost.jpg', 'Бизнес-модель будущего')
+        div.books-theme__item
+          +mini-card('Сделано, чтобы прилипать', 'book.html', 'img/books_all/sdelano-chtoby-prilipat.jpg', 'Почему одни идеи выживают, а другие умирают')
+        div.books-theme__item
+          +mini-card('Школа CEO', 'book.html', 'img/books_all/shkola-ceo.jpg', 'Мастер-класс от 20 глобальных бизнес-лидеров')
+        div.books-theme__item
+          +mini-card('Теория игр', 'book.html', 'img/books_all/teoriya-igr.jpg', 'Искусство стратегического мышления в бизнесе и жизни')
 
   +invitation
 

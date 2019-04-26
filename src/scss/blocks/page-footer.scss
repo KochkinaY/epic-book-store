@@ -1,14 +1,15 @@
 .page-footer {
-  display: block;
-  background-color: #fff;
 
+    display: block;
+    background-color: #fff;
 
   &__inner {
     display: flex;
-    justify-content: space-around;
+    max-width: $content-max-width;
+    margin: auto;
   }
 
-   a {
+  a {
     display: flex;
     text-transform: uppercase;
     text-decoration: none;
@@ -20,23 +21,28 @@
   p {
     display: flex;
     color: $gray;
+    margin-left: 30px;
   }
 
 }
 
 .main-nav {
 
-  &__list {
-    display: flex;
-    align-content: flex-end;
-  }
+  margin-left: auto;
 
+    &__list {
+      display: flex;
+    }
 
-  a {
-    display: flex;
-    color: $gray-dark;
-    text-transform: lowercase;
-    text-decoration: none;
-    margin-left: 15px;
-  }
+    &__item {
+      margin-left: 20px;
+    }
+
+    a {
+      display: flex;
+      color: $gray-dark;
+      text-transform: lowercase;
+      text-decoration: none;
+      margin-left: 15px;
+    }
 }

@@ -1,71 +1,67 @@
 .page-header {
+
   display: block;
   background-color: #fff;
 
+    &__inner {
+  		display: flex;
+  		max-width: $content-max-width;
+      margin: auto;
+    }
 
-  &__inner {
-		display: flex;
-		justify-content: space-around;
-}
+    a {
+      display: flex;
+      align-self: center;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: $gray-dark;
+      font-weight: bold;
+    }
 
-  a {
-    display: flex;
-    align-self: center;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: $gray-dark;
-    font-weight: bold;
-  }
+    p {
+      display: flex;
+      color: $gray;
+      margin-left: 30px;
+    }
 
-  p {
-    display: flex;
-    color: $gray;
-
-  }
-
-  &__cart {
-    color: $gray-dark;
-    padding: 0 20px;
-    text-decoration: none;
-  }
+    &__cart {
+      color: $gray-dark;
+      padding: 0 20px;
+      text-decoration: none;
+    }
 }
 
 .main-nav {
 
-  &__burger {
-    display: none;
-  }
+    &__burger {
+      display: none;
+    }
 
-  &__phone-number {
-    display: none;
-  }
+    &__phone-number {
+      display: none;
+    }
 
-  &__list {
-    display: flex;
-  }
+    &__list {
+      display: flex;
+    }
 
-  &__item {
-    display: flex;
-    align-content: flex-end;
-    text-decoration: none;
-    text-transform: lowercase;
-    margin-left: 30px;
-    color: $gray-dark;
-  }
+    &__item {
+      display: flex;
+      text-decoration: none;
+      text-transform: lowercase;
+      margin-left: 20px;
+      color: $gray-dark;
+    }
 
-  a {
-    display: flex;
-    align-content: flex-end;
-    color: $gray-dark;
-    text-transform: lowercase;
-    margin-left: 15px;
-    text-decoration: none;
-  }
+    a {
+      display: flex;
+      color: $gray-dark;
+      text-transform: lowercase;
+      text-decoration: none;
+    }
 
-  a:hover {
-        display: flex;
-        color: $main-color;
-  }
-
-
+    a:hover {
+      display: flex;
+      color: $main-color;
+    }
 }

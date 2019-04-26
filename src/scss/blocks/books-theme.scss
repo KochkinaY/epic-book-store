@@ -1,41 +1,56 @@
 .books-theme {
-    background-color: $highlight-color;
+    position: relative;
 
+      &:before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 440px;
+        background-color: $highlight-color;
+      }
 
-  &__header {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    background-color: $gray-lightest;
-  }
+      &__inner {
+        max-width: $content-max-width;
+        margin: auto;
+      }
 
-  &__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    height: 100%;
-    padding: 0;
-    margin: 0 5%;
-  }
+      &__header {
+        display: flex;
+        flex-wrap: wrap;
+      }
 
-  &__item {
-    display: flex;
-    width: 340px;
-    padding: 35px 25px;
+      &__list {
+        display: flex;
+        overflow-y: auto;
+        width: 100vw;
+      }
 
-  }
+      &__item {
+        flex-shrink: 0;
+        display: flex;
+        width: 260px;
+        margin-left: 25px;
+        padding: 20px 10px;
 
-  &__title {
-    padding: 70px 0 20px 85px;
-    width: 100%;
-  }
+        &:last-child {
+          padding-right: 35px;
+          width: 285px;
+        }
+      }
 
-  &__link {
-    padding: 0 0 40px 85px;
-    color: $link-color;
-    text-decoration: none;
-    font-weight: bold;
-  }
+      &__title {
+        padding: 60px 0 20px 35px;
+        width: 100%;
+      }
 
+      &__link {
+        padding: 0 0 45px 35px;
+        color: $link-color;
+        text-decoration: none;
+        font-weight: bold;
+      }
 }
 

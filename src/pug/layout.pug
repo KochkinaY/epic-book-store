@@ -13,18 +13,14 @@ html(class='page  no-js', lang='ru')
 
     block head
       link(rel='stylesheet', href='css/style.css')
-      //- link(rel='stylesheet' href='js/bxslider/jquery.bxslider.css')
       script.
         document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
-      //- script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
-      //- script(src='js/bxslider/jquery.bxslider.min.js')
 
   body
     noscript У вас отключен JavaScript. Это пугает.
 
     .page__inner
       .page__content
-
         header.page-header
           .page-header__inner
             a.logo(href='index.html') Book Store
@@ -63,10 +59,10 @@ html(class='page  no-js', lang='ru')
                   a(href='reco.html') Рекомендации
                 li.main-nav__item.main-nav__item--contacts
                   a(href='contacts.html') Контакты
-                li.main-nav__item.main-nav__item--phone
-                  a(href='tel:+78005008020')
-                    svg(width='16', height='16')
-                    span.main-nav__phone-number +7 800 500-80-20
+                //- li.main-nav__item.main-nav__item--phone
+                //-   a(href='tel:+78005008020')
+                //-     svg(width='16', height='16')
+                //-     span.main-nav__phone-number +7 800 500-80-20
 
 
     block page-bottom
